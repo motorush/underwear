@@ -1,0 +1,15 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Clinic IT LogIn
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %link{:href => "/stylesheets/blueprint/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/stylesheets/blueprint/print.css", :media => "print", :rel => "stylesheet", :type => "text/css"}
+    /[if lt IE 8]
+      <link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection">
+  %body
+    .container
+      .header
+        %img{:alt => "Clinic IT", :height => "45", :longdesc => "http://clinic-it.com", :src => "/images/logo.png", :width => "293"}
+      =yield
+

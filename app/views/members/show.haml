@@ -1,0 +1,34 @@
+#navcontainer
+  %ul#navlist
+    %li
+      %a{:href => "/admin"} Admin
+    %li
+      %a{:href => "/members"} Users
+    %li
+      %a{:href => "admins/sign_out"} Sign Out
+.page-wrap
+  %p
+  User Email:
+  =@user.email
+  %p
+  sign in count:
+  =@user.sign_in_count
+  %p
+  current signed in at:
+  =@user.current_sign_in_at
+  %p
+  last signed in at:
+  =@user.last_sign_in_at
+  %p
+  current IP address:
+  =@user.current_sign_in_ip
+  %p
+  last IP address used:
+  =@user.last_sign_in_ip
+  %p
+  created at:
+  =@user.created_at
+  %p
+  last update:
+  =@user.updated_at
+

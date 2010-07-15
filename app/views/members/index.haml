@@ -1,0 +1,18 @@
+#navcontainer
+  %ul#navlist
+    %li
+      %a{:href => "/admin"} Admin
+    %li
+      %a{:href => "/members"} Users
+    %li
+      %a{:href => "admins/sign_out"} Sign Out
+.page-wrap
+  %h2 User List
+  - @users.each do |user|
+    %tr
+    %p
+      %td=h user.email
+      %td= link_to 'Show', "/members/#{user.id}"
+      %td= link_to 'Edit', "/members/#{user.id}/edit"
+      %td= link_to 'Delete', "/members/#{user.id}", :confirm => "Are you sure?", :method => :delete
+
